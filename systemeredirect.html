@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirect to Stats</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tabName = "stats";
+
+            function setActiveTab(tabName) {
+                const tabs = document.querySelectorAll('button');
+                for (const tab of tabs) {
+                    if (tab.textContent.trim().toLowerCase() === tabName.toLowerCase()) {
+                        tab.click();
+                        break;
+                    }
+                }
+            }
+
+            setTimeout(function() {
+                setActiveTab(tabName);
+            }, 1000); // Adjust timeout as needed
+        });
+    </script>
+</head>
+<body>
+    <h1>Redirecting to Stats...</h1>
+    <script>
+        window.location.href = 'https://systeme.io/dashboard/funnels/3446978';
+    </script>
+</body>
+</html>
